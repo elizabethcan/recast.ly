@@ -3,10 +3,10 @@ import YOUTUBE_API_KEY from '../config/youtube.js';
 var searchYouTube = (options, callback) => {
   console.log('searchYouTube called');
   var params = {
-    key: YOUTUBE_API_KEY,
+    key: options.key,
     part: 'snippet',
-    q: options.q,
-    maxResults: options.maxResults,
+    q: options.query,
+    maxResults: options.max,
     type: 'video'
   };
   var baseURL = 'https://www.googleapis.com/youtube/v3/search';
