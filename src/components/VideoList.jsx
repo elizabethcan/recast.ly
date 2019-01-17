@@ -2,8 +2,8 @@ import VideoListEntry from './VideoListEntry.js';
 
 var VideoList = (props) => {
   var listOfVideos = [];
-  for (var i =0; i < props.videos.length; i++) {
-    listOfVideos.push(<VideoListEntry key = {i} video = {props.videos[i]}/>);
+  for (var i = 0; i < props.videos.length; i++) {
+    listOfVideos.push(<VideoListEntry key = {i} video = {props.videos[i]} listClickHandler = {props.listClickHandler}/>);
   }
   return (
     <div className="video-list">
